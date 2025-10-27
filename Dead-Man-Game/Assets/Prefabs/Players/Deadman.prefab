@@ -32,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -9.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5896912869381591406}
   m_Father: {fileID: 0}
@@ -85,12 +85,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: ffd3c29f373a24e83b11382f6cb4f7cb, type: 3}
+  m_Sprite: {fileID: -6321036378071557063, guid: ffd3c29f373a24e83b11382f6cb4f7cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.15625, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,7 +122,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &6038318316045854513
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -157,8 +157,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.5, y: 0.5}
-  m_Radius: 2.9
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.3
 --- !u!114 &6038318316045854514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,10 +203,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: ffd3c29f373a24e83b11382f6cb4f7cb, type: 3}
-  - {fileID: 21300000, guid: f8dca403e76574a049fb08424f864043, type: 3}
-  - {fileID: 21300000, guid: ffd3c29f373a24e83b11382f6cb4f7cb, type: 3}
-  - {fileID: 21300000, guid: 0d81e611632ba4bd09c0741a1429439c, type: 3}
+  - {fileID: -6321036378071557063, guid: ffd3c29f373a24e83b11382f6cb4f7cb, type: 3}
+  - {fileID: -3112979371908818152, guid: f8dca403e76574a049fb08424f864043, type: 3}
+  - {fileID: -6321036378071557063, guid: ffd3c29f373a24e83b11382f6cb4f7cb, type: 3}
+  - {fileID: -4868821236834791043, guid: 0d81e611632ba4bd09c0741a1429439c, type: 3}
   animationTime: 0.125
   loop: 1
   ignoreGameState: 0
@@ -290,7 +290,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c2a3428d5369f54e89eac69cd0ee74f, type: 3}
+  m_Sprite: {fileID: -4868821236834791043, guid: 0d81e611632ba4bd09c0741a1429439c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -314,18 +314,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 7c2a3428d5369f54e89eac69cd0ee74f, type: 3}
-  - {fileID: 21300000, guid: c2677ca0e0dc70f42a7f29031ae0a7d5, type: 3}
-  - {fileID: 21300000, guid: b595a8ceed8117d4cb85975acdec433e, type: 3}
-  - {fileID: 21300000, guid: 5831e314f767e4343be659f70d5311d8, type: 3}
-  - {fileID: 21300000, guid: 7ae4f038555669349b19305499ef3267, type: 3}
-  - {fileID: 21300000, guid: 2eb4a7f536f928148baff2eeba8af7a0, type: 3}
-  - {fileID: 21300000, guid: 2218b2226c23db74c8e39a743542e2e3, type: 3}
-  - {fileID: 21300000, guid: 6767e4473f995a2408eec5b583ded67a, type: 3}
-  - {fileID: 21300000, guid: d4f6bec92b04f35459999a9696d2a1da, type: 3}
-  - {fileID: 21300000, guid: 273b5a5d3e562d3419ecad3222b29217, type: 3}
-  - {fileID: 21300000, guid: c66651b84f0bd454e909b29b38595d84, type: 3}
+  - {fileID: 7036495235294997576, guid: ed30d51250548463ea1bc25187ae40c6, type: 3}
+  - {fileID: 7364055886777912003, guid: dbe38432a7d00495993a00ed0cb269cb, type: 3}
+  - {fileID: -2389731659143339251, guid: 40a6b17a94ff24aa4b9ddc2cac8321ad, type: 3}
+  - {fileID: -1279274922821977591, guid: 755eeb038b0314c579a8e18a36716703, type: 3}
+  - {fileID: -5577138505026135206, guid: 64a442048b25b4626aa6c88b6178e41e, type: 3}
+  - {fileID: -8095071654964051138, guid: 2cb70cdd9b97945918c6d3f799d444b4, type: 3}
+  - {fileID: -6160100845716957700, guid: b0a15f9c2454c4f73ba3fa67d7ff280f, type: 3}
+  - {fileID: -9158657763166503991, guid: 5bbf72d4e530f4898aecec79f00dd226, type: 3}
+  - {fileID: 8105107091585292843, guid: 2dad6b3daeae24d14a1dfb8dabc8c273, type: 3}
+  - {fileID: -1380381903283236453, guid: cc80da42c52a8435cafec6fd8fabc71a, type: 3}
+  - {fileID: 4182968166139839399, guid: 3d69859ace55f468481b965c4b4c429b, type: 3}
   - {fileID: 0}
   animationTime: 0.125
   loop: 0
-  ignoreGameState: 0
+  ignoreGameState: 1
