@@ -46,49 +46,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sounds:
   - name: PelletEaten
-    audioClip: {fileID: 8300000, guid: bb7a4e22362044279a10b302f54ddcc6, type: 3}
+    audioClip: {fileID: 8300000, guid: ce514a7dfa7d04ab4b83d6c477941d82, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: IntroMusic
-    audioClip: {fileID: 8300000, guid: a5bf19d6a696249edbee897f74291db8, type: 3}
+    audioClip: {fileID: 8300000, guid: eda5d661f1d3047ce9c748d785e48427, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: FruitEaten
-    audioClip: {fileID: 8300000, guid: a0315fb0ff0964c8a8c50dc93c0043de, type: 3}
+    audioClip: {fileID: 8300000, guid: 6e5a0c2ebc6c8450b87f97d18b2a9df2, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: GhostMove
-    audioClip: {fileID: 8300000, guid: 8930e27c1ab39405eb7ad11e070a560e, type: 3}
+    audioClip: {fileID: 8300000, guid: 92a26fc38bce446279e9cb51dc857f88, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     audioSource: {fileID: 0}
   - name: GhostEaten
-    audioClip: {fileID: 8300000, guid: faad4361bf53f41d594b9028b1c699a6, type: 3}
+    audioClip: {fileID: 8300000, guid: 7bdc21fba163548b8a75613d61db1d53, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: GhostFrightened
-    audioClip: {fileID: 8300000, guid: b3d47293d46714d34a1d5cb75c6a6d5a, type: 3}
+    audioClip: {fileID: 8300000, guid: 0627d80a649f94099969d012c9c904aa, type: 3}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     audioSource: {fileID: 0}
   - name: PacManDeath
-    audioClip: {fileID: 8300000, guid: df32971d4b58c47279da8d649cbd0f23, type: 3}
+    audioClip: {fileID: 8300000, guid: eb33d44d9890c4980ae9dbe6016d3b44, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     audioSource: {fileID: 0}
   - name: ExtraLife
-    audioClip: {fileID: 8300000, guid: 4d39777365b014303b4a24784957ee6b, type: 3}
+    audioClip: {fileID: 8300000, guid: affbb02b8e4904e2d879e5ffd9954570, type: 3}
     volume: 1
     pitch: 1
     loop: 0
