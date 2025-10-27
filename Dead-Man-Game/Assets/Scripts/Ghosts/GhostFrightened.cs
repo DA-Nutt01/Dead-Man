@@ -59,6 +59,7 @@ public class GhostFrightened : GhostBehavior
         ghost.movement.speedMultiplier = 0.5f;
         eaten = false;
 
+        AudioManager.Instance.StopSound("GhostMove");
         AudioManager.Instance.PlaySound("GhostFrightened");
     }
 
@@ -68,6 +69,7 @@ public class GhostFrightened : GhostBehavior
         eaten = false;
 
         AudioManager.Instance.StopSound("GhostFrightened");
+        AudioManager.Instance.PlaySound("GhostMove");
     }
 
     private void OnTriggerEnter2D(Collider2D other)

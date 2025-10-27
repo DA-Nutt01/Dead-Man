@@ -1,0 +1,13 @@
+{
+    "asset": "d98f17f37f2fc455092cf221f6a366b7",
+    "fileName": "019a23cd-d3fc-7740-8aa8-5577fc4d2001.wav",
+    "prompt": "Edit this audio file to perfectly loop into itself",
+    "negativePrompt": "",
+    "model": "ee31b223-3fe1-4ae6-bf54-d8a80bb4b0e1",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "140483a5d7431a203d77262fb5a4a811",
+    "duration": 6.383999824523926,
+    "autoTrim": true,
+    "hasReference": true
+}

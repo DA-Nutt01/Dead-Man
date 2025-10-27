@@ -1,0 +1,13 @@
+{
+    "asset": "d98f17f37f2fc455092cf221f6a366b7",
+    "fileName": "019a23ce-e7c1-7597-acb5-6c8d10167275.wav",
+    "prompt": "Create an exact copy of the reference audio file, make it loop perfeclty into itself",
+    "negativePrompt": "",
+    "model": "ee31b223-3fe1-4ae6-bf54-d8a80bb4b0e1",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "92df74ba479438fee0daa0c7a3b1116e",
+    "duration": 6.383999824523926,
+    "autoTrim": true,
+    "hasReference": true
+}
