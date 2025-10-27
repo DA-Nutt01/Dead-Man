@@ -1,0 +1,20 @@
+{
+    "asset": "8b4a911e7bf1b4fdbbfe5f27651e29da",
+    "fileName": "019a1ff0-d04c-747f-9703-89a242e6da9c.png",
+    "prompt": "Floating head of Nemesis from the Resident Evil video game franchise as Pac Man",
+    "negativePrompt": "",
+    "model": "409229d8-9653-42a8-b069-824d11ef6762",
+    "modelName": "8-bit Pixel",
+    "customSeed": -1,
+    "w3CTraceId": "cc6272a51134e26872f5f06fce288bef",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}
