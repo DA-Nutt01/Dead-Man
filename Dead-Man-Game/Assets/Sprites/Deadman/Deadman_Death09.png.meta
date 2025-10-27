@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0d81e611632ba4bd09c0741a1429439c
+guid: cc80da42c52a8435cafec6fd8fabc71a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4868821236834791043
-    second: Deadman_01_0
+      213: -1380381903283236453
+    second: Deadman_Death09_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Deadman_01_0
+      name: Deadman_Death09_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 11
-        width: 80
-        height: 80
+        x: 42
+        y: 33
+        width: 7
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d71959791e87e6cb0800000000000000
-      internalID: -4868821236834791043
+      spriteID: b91dc68f8f5e7dce0800000000000000
+      internalID: -1380381903283236453
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Deadman_01_0: -4868821236834791043
+      Deadman_Death09_0: -1380381903283236453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -20,11 +20,15 @@ public class AnimatedSprite : MonoBehaviour
     private void OnEnable()
     {
         spriteRenderer.enabled = true;
+        // Restart the animation when the component is enabled
+        //animationFrame = -1;
+        //InvokeRepeating(nameof(Advance), animationTime, animationTime);
     }
 
     private void OnDisable()
     {
         spriteRenderer.enabled = false;
+        //CancelInvoke(nameof(Advance)); 
     }
 
     private void Start()
