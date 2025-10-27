@@ -20,23 +20,33 @@ public class Pacman : MonoBehaviour
     {
         if (GameManager.gameState != GameState.Gameplay) return;
 
-        // Set the new direction based on the current input
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-            movement.SetDirection(Vector2.up);
-        }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-            movement.SetDirection(Vector2.down);
-        }
-        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-            movement.SetDirection(Vector2.left);
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-            movement.SetDirection(Vector2.right);
-        }
+    if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+        movement.SetDirection(Vector2.up);
+    }
+    else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+        movement.SetDirection(Vector2.down);
+    }
+    else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+        movement.SetDirection(Vector2.left);
+    }
+    else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+        movement.SetDirection(Vector2.right);
+    }
 
-        // Rotate pacman to face the movement direction
-        float angle = Mathf.Atan2(movement.direction.y, movement.direction.x);
-        transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+    // Keep Pac-Man upright and just flip or rotate 90° increments
+    Vector2 dir = movement.direction;
+    if (dir == Vector2.up) {
+        transform.rotation = Quaternion.Euler(0, 0, 90);
+    }
+    else if (dir == Vector2.down) {
+        transform.rotation = Quaternion.Euler(0, 0, -90);
+    }
+    else if (dir == Vector2.left) {
+        transform.rotation = Quaternion.Euler(0, 180, 0); // flip horizontally
+    }
+    else if (dir == Vector2.right) {
+        transform.rotation = Quaternion.identity;
+    }
     }
 
     public void ResetState()
