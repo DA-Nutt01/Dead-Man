@@ -64,7 +64,7 @@ MonoBehaviour:
     loop: 0
     audioSource: {fileID: 0}
   - name: GhostMove
-    audioClip: {fileID: 8300000, guid: 71a1f2747c96042ae975d7e1c650a5f5, type: 3}
+    audioClip: {fileID: 8300000, guid: 8930e27c1ab39405eb7ad11e070a560e, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
     loop: 0
     audioSource: {fileID: 0}
   - name: GhostFrightened
-    audioClip: {fileID: 8300000, guid: 7ced7c933c84e4c02b7673bc63fff158, type: 3}
+    audioClip: {fileID: 8300000, guid: b3d47293d46714d34a1d5cb75c6a6d5a, type: 3}
     volume: 1
     pitch: 1
     loop: 1

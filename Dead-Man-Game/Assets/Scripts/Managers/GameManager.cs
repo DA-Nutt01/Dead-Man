@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; } = 3;
 
     private int ghostMultiplier = 1;
+    private bool earnedExtraLife = false;
 
     // EVENTS
     public static event Action OnLevelStart;
@@ -68,16 +69,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (lives <= 0 && Input.anyKeyDown) {
+        if (lives <= 0 && Input.anyKeyDown && gameState != GameState.LevelStart) {
             StartCoroutine(PlayIntroSequence());
         }
     }
 
     private void NewGame()
     {
+        earnedExtraLife = false;
         SetScore(0);
         SetLives(3);
-        
         NextLevel();
     }
 
@@ -101,12 +102,12 @@ public class GameManager : MonoBehaviour
 
     private void ResetState()
     {
+        gameState = GameState.Gameplay;
         for (int i = 0; i < ghosts.Length; i++) {
             ghosts[i].ResetState();
         }
 
         pacman.ResetState();
-        gameState = GameState.Gameplay;
     }
 
     private void EnableGhosts()
@@ -157,6 +158,13 @@ public class GameManager : MonoBehaviour
 
         // Check Highscore
         if (score > highScore) SetHighScore(score);
+
+        // Check for Extra Life
+        if (score > 10000 && !earnedExtraLife){
+            earnedExtraLife = true;
+            SetLives(lives + 1);
+            AudioManager.Instance.PlaySound("ExtraLife");
+        }
         
     }
 
