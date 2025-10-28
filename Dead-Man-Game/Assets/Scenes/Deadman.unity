@@ -407,6 +407,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1671937172}
     m_Modifications:
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1316824011001565068, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
       propertyPath: m_Name
       value: Audio Manager (Deadman)
@@ -633,6 +637,10 @@ PrefabInstance:
       propertyPath: tileMap
       value: 
       objectReference: {fileID: 873056021}
+    - target: {fileID: 2101170067396112682, guid: fd9b6ee86479f4f7c89fb7acda328fbd, type: 3}
+      propertyPath: fruitTile
+      value: 
+      objectReference: {fileID: 11400000, guid: 78d735dc501984ae3a185bdf0ce48a65, type: 2}
     - target: {fileID: 4587523092744234939, guid: fd9b6ee86479f4f7c89fb7acda328fbd, type: 3}
       propertyPath: m_Name
       value: Fruit Manager (Deadman)
@@ -11107,6 +11115,10 @@ PrefabInstance:
     - target: {fileID: 6565353212798649369, guid: 087becd47a2854474af4e797c5e74c80, type: 3}
       propertyPath: m_Tiles.Array.data[583].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553598838696167707, guid: 087becd47a2854474af4e797c5e74c80, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7758983102270380855, guid: 087becd47a2854474af4e797c5e74c80, type: 3}
       propertyPath: m_LocalPosition.x
