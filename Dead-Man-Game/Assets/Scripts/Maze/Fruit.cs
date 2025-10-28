@@ -20,29 +20,49 @@ public class Fruit : Pellet
                 points = 300;
                 renderer.sprite = fruitIcons[1];
                 break;
-            case 3 or 4:
+            case 3:
                 points = 500;
                 renderer.sprite = fruitIcons[2];
                 break;
-            case 5 or 6:
-                points = 700;
+            case 4:
+                points = 500;
                 renderer.sprite = fruitIcons[3];
-                break;
-            case 7 or 8:
-                points = 1000;
+                break;    
+            case 5:
+                points = 700;
                 renderer.sprite = fruitIcons[4];
                 break;
-            case 9 or 10:
-                points = 2000;
+            case 6:
+                points = 700;
                 renderer.sprite = fruitIcons[5];
                 break;
-            case 11 or 12:
-                points = 3000;
+            case 7:
+                points = 1000;
                 renderer.sprite = fruitIcons[6];
+                break;
+            case 8:
+                points = 1000;
+                renderer.sprite = fruitIcons[7];
+                break;
+            case 9:
+                points = 2000;
+                renderer.sprite = fruitIcons[8];
+                break;
+            case 10:
+                points = 2000;
+                renderer.sprite = fruitIcons[9];
+                break;
+            case 11:
+                points = 3000;
+                renderer.sprite = fruitIcons[10];
+                break;
+            case 12:
+                points = 3000;
+                renderer.sprite = fruitIcons[11];
                 break;
             case > 12:
                 points = 5000;
-                renderer.sprite = fruitIcons[7];
+                renderer.sprite = fruitIcons[12];
                 break;
         }
     }

@@ -45,26 +45,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   levelIcons:
-  - {fileID: 21300000, guid: bcf9abba0c5011447aedacaa56f809a4, type: 3}
-  - {fileID: 21300000, guid: 7f92fd0a6259c0748a3798477124414b, type: 3}
-  - {fileID: 21300000, guid: 1f934a213c2899840a159f72b7f44e57, type: 3}
-  - {fileID: 21300000, guid: 1f934a213c2899840a159f72b7f44e57, type: 3}
-  - {fileID: 21300000, guid: 333efda297305804ab18ba62c4a59b0d, type: 3}
-  - {fileID: 21300000, guid: 333efda297305804ab18ba62c4a59b0d, type: 3}
-  - {fileID: 21300000, guid: 76efc71326ce0624b86ebac20e4ad950, type: 3}
-  - {fileID: 21300000, guid: 76efc71326ce0624b86ebac20e4ad950, type: 3}
-  - {fileID: 21300000, guid: 43287113cc1900f44a90a7c880c6c0f6, type: 3}
-  - {fileID: 21300000, guid: 43287113cc1900f44a90a7c880c6c0f6, type: 3}
-  - {fileID: 21300000, guid: 9db59b1f7c3f18a488bb7006c8f7d63a, type: 3}
-  - {fileID: 21300000, guid: 9db59b1f7c3f18a488bb7006c8f7d63a, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
-  - {fileID: 21300000, guid: 77161e8e8bee8ad4280d90b263fece75, type: 3}
+  - {fileID: 2295675766220798812, guid: 95dffe1e07d454374a038487f29d18b3, type: 3}
+  - {fileID: -3286712261571993306, guid: 22152b48939c44a4bbd78ed279f8ac4d, type: 3}
+  - {fileID: -3122344612956119040, guid: 54264eeebd2a548888988976ca9e78ef, type: 3}
+  - {fileID: 731664424037545400, guid: deca99960ed38479cb3751913747d3aa, type: 3}
+  - {fileID: 4586634740463907700, guid: 2756265ea30de4488af9983cc157c2f2, type: 3}
+  - {fileID: -4637099777402327634, guid: 25d888f5a83024d0abedf67cc7cfe28d, type: 3}
+  - {fileID: -1424562743321935598, guid: 6fd963217e88e4556bef381ce2bf3259, type: 3}
+  - {fileID: -1203804788591126737, guid: 12d16f44d15ad4437af3fb018d48ee70, type: 3}
+  - {fileID: -592514984197313119, guid: e9a25b3fb0bb240d88be044cb16496fe, type: 3}
+  - {fileID: -5571568478320107296, guid: 29fa0fe2efd034572815f8b3ed16b52a, type: 3}
+  - {fileID: 7464807257003770129, guid: 8b322637fca17416894b892000eb23c6, type: 3}
+  - {fileID: 7792956345595797006, guid: 6c6502f8286b84a339e09126477d4c86, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
+  - {fileID: -5463446841447022984, guid: 2e923d4697e0d4d5dbbb06eaacd47a9d, type: 3}
   - {fileID: 21300000, guid: e52ee8a5840dcaf4499f536c1580873c, type: 3}
   levelIconSlots:
   - {fileID: 0}
