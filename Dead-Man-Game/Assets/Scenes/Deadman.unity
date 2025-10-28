@@ -1209,7 +1209,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1628584064760081080, guid: 97bf8e37a714d42969ab9dd3b953a836, type: 3}
       propertyPath: m_Name
-      value: STARS_Barry
+      value: STARS_Wesker
       objectReference: {fileID: 0}
     - target: {fileID: 1628584064760081084, guid: 97bf8e37a714d42969ab9dd3b953a836, type: 3}
       propertyPath: target
@@ -1356,7 +1356,7 @@ PrefabInstance:
       objectReference: {fileID: 267590933}
     - target: {fileID: 7751997247944386847, guid: bd911f16484aa4403b16807d9de431f0, type: 3}
       propertyPath: m_Name
-      value: STARS_Rebecca
+      value: STARS_Jill
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1559,7 +1559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8404568252169512668, guid: 729064b1f251e4235b8df72ff2c7efac, type: 3}
       propertyPath: m_Name
-      value: STARS_Brad
+      value: STARS_Barry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1614,7 +1614,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1411192384042101824, guid: c37b9e5e4061e4145a19f385f0ab3be4, type: 3}
       propertyPath: m_Name
-      value: STARS_Jill
+      value: STARS_Chris
       objectReference: {fileID: 0}
     - target: {fileID: 1411192384042101828, guid: c37b9e5e4061e4145a19f385f0ab3be4, type: 3}
       propertyPath: target
