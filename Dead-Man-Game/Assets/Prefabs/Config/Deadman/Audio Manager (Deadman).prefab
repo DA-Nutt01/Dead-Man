@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sounds:
   - name: PelletEaten
-    audioClip: {fileID: 8300000, guid: ce514a7dfa7d04ab4b83d6c477941d82, type: 3}
+    audioClip: {fileID: 8300000, guid: d16beed37b4d34f078e2d4eba3dcacad, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     loop: 0
     audioSource: {fileID: 0}
   - name: GhostMove
-    audioClip: {fileID: 8300000, guid: 92a26fc38bce446279e9cb51dc857f88, type: 3}
+    audioClip: {fileID: 8300000, guid: 05810469856e644149ab77cad9e4400b, type: 3}
     volume: 1
     pitch: 1
     loop: 1

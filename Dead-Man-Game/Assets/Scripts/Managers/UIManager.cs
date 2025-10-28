@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     public void UpdateLevelUI(int currentLevel){
         // Determine the range to populate the sprite list based on the level
         // Loop through each lvl icon slot and populate that slot with the proper index of the range
-        Debug.Log($"Current Level: {currentLevel}");
+        //Debug.Log($"Current Level: {currentLevel}");
 
         switch (currentLevel){
             case < 8:
