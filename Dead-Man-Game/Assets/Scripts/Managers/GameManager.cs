@@ -202,13 +202,36 @@ public class GameManager : MonoBehaviour
 
     public void PowerPelletEaten(PowerPellet pellet)
     {
-        for (int i = 0; i < ghosts.Length; i++) {
-            ghosts[i].frightened.Enable(pellet.duration);
+        PelletEaten(pellet);
+        StartCoroutine(NemesisTransformation(pellet));
+    }
+
+    private IEnumerator NemesisTransformation(PowerPellet pellet){
+        gameState = GameState.PowerPelletEaten;
+        AudioManager.Instance.PlaySound("PowerPelletEaten");
+
+        // Get the Sound object for the intro music
+        Sound clip = Array.Find(AudioManager.Instance.sounds, sound => sound.name == "PowerPelletEaten");
+        if (clip == null || clip.audioClip == null)
+        {
+            Debug.LogError("Sound Effect not found in AudioManager!");
+            yield break;
         }
 
-        PelletEaten(pellet);
+        // Wait until the audio reaches 100% of its duration
+        float audioDuration = clip.audioClip.length;
+
+        for (int i = 0; i < ghosts.Length; i++) {
+            ghosts[i].frightened.Enable(pellet.duration + audioDuration);
+        }
+
+        pacman.Transform(audioDuration, pellet.duration);
+
+        yield return new WaitForSeconds(audioDuration);
+
         CancelInvoke(nameof(ResetGhostMultiplier));
         Invoke(nameof(ResetGhostMultiplier), pellet.duration);
+        gameState = GameState.Gameplay;
     }
 
     private bool HasRemainingPellets()
@@ -231,6 +254,7 @@ public class GameManager : MonoBehaviour
     public void PacmanEaten()
     {
         StartCoroutine(DeathSequence());
+        AudioManager.Instance.PlaySound("Gunshots");
     }
 
     private IEnumerator DeathSequence()

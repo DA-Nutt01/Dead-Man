@@ -246,6 +246,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 672828260759337289, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 841214846804863694, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657742697418918697, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657742697418918697, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038318316045854514, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: NemesisSkin
+      value: 
+      objectReference: {fileID: 1900468563}
+    - target: {fileID: 6038318316045854514, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: NemesisMovement
+      value: 
+      objectReference: {fileID: 1900468565}
     - target: {fileID: 6038318316045854524, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -289,6 +313,38 @@ PrefabInstance:
     - target: {fileID: 6038318316045854526, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
       propertyPath: m_Name
       value: Deadman
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160053650670512465, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160053650670512465, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: animationTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_Size.x
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_Size.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7680075008989481833, guid: f59211e0ad6d346999a4f6bf99a5fa3f, type: 3}
+    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -352,6 +408,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2a82916a0e72a4daffdef2f2eafb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1900468563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 841214846804863694, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+  m_PrefabInstance: {fileID: 625483251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1900468565 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6160053650670512465, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+  m_PrefabInstance: {fileID: 625483251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900468563}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824908b24fd58c84296be726049e76aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatedSprite
 --- !u!114 &1974398881 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7751997247944386843, guid: bd911f16484aa4403b16807d9de431f0, type: 3}
@@ -388,13 +460,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 1671937172}
     m_Modifications:
     - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: PowerPelletEaten
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: Gunshots
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
       propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[9].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
       propertyPath: sounds.Array.data[0].audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ce514a7dfa7d04ab4b83d6c477941d82, type: 3}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[8].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 865658ef3b24c4480b25db0d1a8d81a8, type: 3}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[9].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9013f0daa461e4b8cbe577b5cfbd819e, type: 3}
     - target: {fileID: 1316824011001565068, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
       propertyPath: m_Name
       value: Audio Manager (Deadman)

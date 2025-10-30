@@ -119,6 +119,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1839735485 &165177870 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 5997010432419657127, guid: 1952ef8c74cff40f3b4db4c19e595013, type: 3}
+  m_PrefabInstance: {fileID: 485042948}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &242758655 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3626135845871195803, guid: 1952ef8c74cff40f3b4db4c19e595013, type: 3}
+  m_PrefabInstance: {fileID: 485042948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &267590929 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6038318316045854514, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
@@ -558,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 206900866168798363, guid: 328cb0d38b82247e9a67337214b4ffc7, type: 3}
       propertyPath: pellets
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 242758655}
     - target: {fileID: 206900866168798363, guid: 328cb0d38b82247e9a67337214b4ffc7, type: 3}
       propertyPath: livesText
       value: 
@@ -703,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 2101170067396112682, guid: fd9b6ee86479f4f7c89fb7acda328fbd, type: 3}
       propertyPath: tileMap
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 165177870}
     - target: {fileID: 2101170067396112682, guid: fd9b6ee86479f4f7c89fb7acda328fbd, type: 3}
       propertyPath: fruitTile
       value: 

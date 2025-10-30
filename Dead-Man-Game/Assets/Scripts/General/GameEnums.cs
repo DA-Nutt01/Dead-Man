@@ -2,6 +2,7 @@
     LevelStart,
     Gameplay,
     PlayerDeath,
+    PowerPelletEaten,
 }
 
 public enum FruitType{
