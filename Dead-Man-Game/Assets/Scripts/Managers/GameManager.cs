@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 [DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
@@ -65,13 +66,6 @@ public class GameManager : MonoBehaviour
         // Play Start of Game Sequence
         gameState = GameState.LevelStart;
         StartCoroutine(PlayIntroSequence());
-    }
-
-    private void Update()
-    {
-        if (lives <= 0 && Input.anyKeyDown && gameState != GameState.LevelStart) {
-            StartCoroutine(PlayIntroSequence());
-        }
     }
 
     private void NewGame()
@@ -144,6 +138,12 @@ public class GameManager : MonoBehaviour
 
         pacman.gameObject.SetActive(false);
         SaveHighScore();
+        Invoke(nameof(LoadMenu), 3f);
+    }
+
+    private void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void SetLives(int lives)
