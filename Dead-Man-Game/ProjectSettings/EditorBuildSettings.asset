@@ -6,6 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 510e33e7eb83d4320a70d27a5b3f51c1
+  - enabled: 1
+    path: Assets/Scenes/Deadman.unity
+    guid: 06371744400d142d091832588db3b820
+  - enabled: 1
     path: Assets/Scenes/Pacman.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

@@ -18,7 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698576683935246387, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.455
+      value: 0.565
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703408331179623121, guid: 2fde9760580df734b965459e729d1aba, type: 3}
+      propertyPath: animationTime
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2703408331179623121, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: 'sprites.Array.data[0]'
@@ -133,6 +137,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4754998162861572984, guid: 2fde9760580df734b965459e729d1aba, type: 3}
+      propertyPath: animationTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754998162861572984, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: 'sprites.Array.data[0]'
       value: 
       objectReference: {fileID: -3146132886160225632, guid: 66f665a3488bd4e1785eb39fc703cf5d, type: 3}
@@ -140,6 +148,10 @@ PrefabInstance:
       propertyPath: 'sprites.Array.data[1]'
       value: 
       objectReference: {fileID: -7663341635678722376, guid: ad96a39a2a5a64ae88b8a6c8699a1700, type: 3}
+    - target: {fileID: 5272674126107970678, guid: 2fde9760580df734b965459e729d1aba, type: 3}
+      propertyPath: animationTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5272674126107970678, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: 'sprites.Array.data[0]'
       value: 
