@@ -1,35 +1,33 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
     [SerializeField, Tooltip("The amount of time in seconds before the player can press a button to start the game after this scene is loaded.")] 
     private float inputDelay = 3f;
+    [SerializeField] private Text HighScoreText;
+
     private bool canListenForInput = false; // Flag to track if input can be processed
 
+    private void OnEnable(){
+        InputManager.Instance.OnAnyKey += InputManager_OnAnyKey;
+    }
+
+    private void OnDisable(){
+        InputManager.Instance.OnAnyKey -= InputManager_OnAnyKey;
+    }
+
     void Start(){
-            // Start a delayed activation of input listening
-            Invoke(nameof(EnableInputListening), inputDelay);
-        }
+        // Start a delayed activation of input listening
+        Invoke(nameof(EnableInputListening), inputDelay);
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        HighScoreText.text = highScore.ToString().PadLeft(2, '0'); 
+     }
 
-    void Update(){
+    private void InputManager_OnAnyKey(){
         if (!canListenForInput) return;
-
-        // Check if the "P" key is pressed
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            // Load the "Pacman" scene (index 2)
-            SceneManager.LoadScene(2);
-            return;
-        }
-
-        // Check if any key is pressed
-        if (Input.anyKeyDown)
-        {
-            // Load the "Deadman" scene (index 1)
-            SceneManager.LoadScene(1);
-            return;
-        }
+        SceneManager.LoadScene(1);
     }
 
     private void EnableInputListening(){
