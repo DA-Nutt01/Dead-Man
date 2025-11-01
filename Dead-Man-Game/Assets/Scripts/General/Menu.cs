@@ -19,14 +19,21 @@ public class Menu : MonoBehaviour
     }
 
     void Start(){
+        // Start Menu Music
+        AudioManager.Instance.PlaySound("MenuMusic");
+
         // Start a delayed activation of input listening
         Invoke(nameof(EnableInputListening), inputDelay);
+
+        // Display High Score
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         HighScoreText.text = highScore.ToString().PadLeft(2, '0'); 
      }
 
     private void InputManager_OnAnyKey(){
         if (!canListenForInput) return;
+        AudioManager.Instance.StopSound("MenuMusic");
+        AudioManager.Instance.PlaySound("StartGame");
         SceneManager.LoadScene(1);
     }
 

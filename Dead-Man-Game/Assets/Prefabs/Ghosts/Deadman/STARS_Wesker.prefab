@@ -14,7 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1698576683935246387, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.741
+      value: 0.732
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717795626721137653, guid: 2fde9760580df734b965459e729d1aba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2703408331179623121, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: loop
@@ -83,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 3259707676119580883, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259707676119580883, guid: 2fde9760580df734b965459e729d1aba, type: 3}
+      propertyPath: ghostType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3259707676119580883, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: initialState
@@ -184,6 +192,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6004530310410983898, guid: 6ad2ea5aecccb408f9294bd7f8ee6054, type: 3}
+    - target: {fileID: 7900180623841632990, guid: 2fde9760580df734b965459e729d1aba, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8182922294497502225, guid: 2fde9760580df734b965459e729d1aba, type: 3}
       propertyPath: m_Sprite
       value: 

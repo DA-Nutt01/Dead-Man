@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316824011001565068}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.23666, y: -1.80813, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sounds:
   - name: PelletEaten
-    audioClip: {fileID: 8300000, guid: d16beed37b4d34f078e2d4eba3dcacad, type: 3}
+    audioClip: {fileID: 8300000, guid: ce514a7dfa7d04ab4b83d6c477941d82, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -92,4 +92,22 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
+    audioSource: {fileID: 0}
+  - name: PowerPelletEaten
+    audioClip: {fileID: 8300000, guid: 865658ef3b24c4480b25db0d1a8d81a8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: Gunshots
+    audioClip: {fileID: 8300000, guid: 0445600eb4ec341319ffed8d46bdd647, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - name: STARS Footsteps
+    audioClip: {fileID: 8300000, guid: 5c8eb92a738af4f019c49c9bd7ad7229, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
     audioSource: {fileID: 0}

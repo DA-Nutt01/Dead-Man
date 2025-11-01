@@ -1,12 +1,12 @@
-// 10/30/2025 AI-Tag
-// This was created with the help of Assistant, a Unity Artificial Intelligence product.
-
 using UnityEngine;
 using System.Collections;
+using System;
 
 [RequireComponent(typeof(Movement))]
 public class Pacman : MonoBehaviour
 {
+    public static Pacman Instance {get; private set;}
+
     [SerializeField] private AnimatedSprite deathSequence;
     [SerializeField] private GameObject NemesisSkin;
     [SerializeField] private AnimatedSprite NemesisMovement;
@@ -35,6 +35,12 @@ public class Pacman : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null & Instance != this) {
+            DestroyImmediate(gameObject);
+        } else {
+            Instance = this;
+        }
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
         circleCollider = GetComponent<CircleCollider2D>();
         movement = GetComponent<Movement>();
@@ -129,6 +135,14 @@ public class Pacman : MonoBehaviour
         currentTransformationCoroutine = StartCoroutine(NemesisTransformation(buffer, duration));
     }
 
+    public IEnumerator GhostEaten(){
+        // Toggle Sprite Off
+        NemesisSkin.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        // Toggle Sprite On
+        NemesisSkin.SetActive(true);
+    }
+
     private IEnumerator NemesisTransformation(float audioBufferTime, float duration)
     {
         // Ensure NemesisSkin is enabled and spriteRenderer is disabled
@@ -162,3 +176,4 @@ public class Pacman : MonoBehaviour
         currentTransformationCoroutine = null;
     }
 }
+
