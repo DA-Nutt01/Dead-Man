@@ -17,6 +17,22 @@ public class Pacman : MonoBehaviour
     private bool isTransformed = false;
     private Coroutine currentTransformationCoroutine; // Stores the active coroutine
 
+    private void OnEnable(){
+        // Subscribe to Input Events
+        InputManager.Instance.OnMoveUp += InputManager_OnMoveUp;
+        InputManager.Instance.OnMoveDown += InputManager_OnMoveDown;
+        InputManager.Instance.OnMoveLeft += InputManager_OnMoveLeft;
+        InputManager.Instance.OnMoveRight += InputManager_OnMoveRight;
+    }
+
+    private void OnDisable(){
+        // Unsubscribe from Input Events
+        InputManager.Instance.OnMoveUp -= InputManager_OnMoveUp;
+        InputManager.Instance.OnMoveDown -= InputManager_OnMoveDown;
+        InputManager.Instance.OnMoveLeft -= InputManager_OnMoveLeft;
+        InputManager.Instance.OnMoveRight -= InputManager_OnMoveRight;
+    }
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -30,23 +46,6 @@ public class Pacman : MonoBehaviour
     private void Update()
     {
         if (GameManager.gameState != GameState.Gameplay) return;
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            movement.SetDirection(Vector2.up);
-        }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            movement.SetDirection(Vector2.down);
-        }
-        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            movement.SetDirection(Vector2.left);
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            movement.SetDirection(Vector2.right);
-        }
 
         // Do not rotate Deadman if he is transformed as Nemesis
         if (isTransformed) return;
@@ -69,6 +68,26 @@ public class Pacman : MonoBehaviour
         {
             transform.rotation = Quaternion.identity;
         }
+    }
+
+    private void InputManager_OnMoveUp(){
+        if (GameManager.gameState != GameState.Gameplay) return;
+        movement.SetDirection(Vector2.up);
+    }
+
+    private void InputManager_OnMoveDown(){
+        if (GameManager.gameState != GameState.Gameplay) return;
+        movement.SetDirection(Vector2.down);
+    }
+
+    private void InputManager_OnMoveLeft(){
+        if (GameManager.gameState != GameState.Gameplay) return;
+        movement.SetDirection(Vector2.left);
+    }
+
+    private void InputManager_OnMoveRight(){
+        if (GameManager.gameState != GameState.Gameplay) return;
+        movement.SetDirection(Vector2.right);
     }
 
     public void ResetState()

@@ -1,0 +1,214 @@
+{
+    "version": 1,
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "b5b27a0f-b913-4748-8f9d-0e82f4e9b2a6",
+            "actions": [
+                {
+                    "name": "Move Up",
+                    "type": "Button",
+                    "id": "8cd676f3-c27c-4a79-9d2c-a963742a6ddd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Down",
+                    "type": "Button",
+                    "id": "30a6d89d-e69b-48e2-8923-37a092196a5a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Left",
+                    "type": "Button",
+                    "id": "c86e22dd-e138-48ad-8394-09aa21a8a5bd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Move Right",
+                    "type": "Button",
+                    "id": "f2c9b724-1ea5-4415-9b44-7d6e38a1178c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Any Key",
+                    "type": "Button",
+                    "id": "ea5a4d98-446e-4845-a877-45d8f804650e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c0ddcea4-ace2-4401-a108-bc4ffcdb41af",
+                    "path": "<HID::  MAYFLASH Arcade Fightstick F300>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d5311b3-fdcd-4bfe-a26b-c92f5a4facbb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9db5583-774b-4865-bd27-4c801c0d7586",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "adac1e49-a1ce-4e08-8c96-a3f2931f1618",
+                    "path": "<HID::  MAYFLASH Arcade Fightstick F300>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "356a1d73-5b0e-4465-b21e-f69d192b8cf4",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c786dc58-916b-4608-aa93-85558a7c7d7e",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92c108d6-b50a-4df7-81fb-b5210bad6a8f",
+                    "path": "<HID::  MAYFLASH Arcade Fightstick F300>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "edf1c2a5-4b97-4112-9fe2-bb55c7816fb2",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3fa34fb-bf66-40ac-9775-ecf95951692e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6be441d-3ef0-4fe9-a820-4310060ab6e3",
+                    "path": "<HID::  MAYFLASH Arcade Fightstick F300>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6282b3e-11db-4e90-b31e-e83737de88c6",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f24508e2-8ca4-4f6d-86b6-140246aed578",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "471adcaf-939e-4476-a691-9aaf0904bfa0",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b62b87cf-bf26-48b4-8745-66e0b244c965",
+                    "path": "<HID::  MAYFLASH Arcade Fightstick F300>/button12",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Any Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
