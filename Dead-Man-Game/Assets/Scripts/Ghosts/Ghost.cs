@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 [DefaultExecutionOrder(-10)]
 [RequireComponent(typeof(Movement))]
@@ -10,6 +12,11 @@ public class Ghost : MonoBehaviour
     public GhostChase chase { get; private set; }
     public GhostFrightened frightened { get; private set; }
     public GhostBehavior initialBehavior;
+
+    [SerializeField] private GameObject bodyContainer;
+    public Text pointText;
+
+    [SerializeField] private GhostType ghostType;
     public Transform target;
     public int points = 200;
 
@@ -20,6 +27,8 @@ public class Ghost : MonoBehaviour
         scatter = GetComponent<GhostScatter>();
         chase = GetComponent<GhostChase>();
         frightened = GetComponent<GhostFrightened>();
+
+        pointText.enabled = false;
     }
 
     private void Start()
@@ -47,6 +56,7 @@ public class Ghost : MonoBehaviour
         if (GameManager.gameState == GameState.Gameplay)
         {
             AudioManager.Instance.PlaySound("GhostMove");
+            AudioManager.Instance.PlaySound("STARS Footsteps");
         }
         
     }
@@ -65,10 +75,31 @@ public class Ghost : MonoBehaviour
             if (frightened.enabled) {
                 GameManager.Instance.GhostEaten(this);
                 AudioManager.Instance.PlaySound("GhostEaten");
+
             } else {
                 GameManager.Instance.PacmanEaten();
             }
         }
+    }
+
+    public IEnumerator GhostEaten(int multiplier){
+        // Pause Gameplay
+        GameManager.Instance.ChangeGameState(GameState.GhostEaten);
+        // Toggle Ghost body container
+        bodyContainer.SetActive(false);
+        // Calculate points to display
+        int earnedPoints = points * multiplier;
+        pointText.text = earnedPoints.ToString().PadLeft(2, '0');
+        
+
+        // Toggle world canvas text
+        pointText.enabled = true;
+        // Wait 1 second
+        yield return new WaitForSeconds(1.5f);
+        // Resume gameplay
+        pointText.enabled = false;
+        bodyContainer.SetActive(true);
+        GameManager.Instance.ChangeGameState(GameState.Gameplay);
     }
 
 }

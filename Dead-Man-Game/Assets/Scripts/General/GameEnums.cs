@@ -3,6 +3,7 @@
     Gameplay,
     PlayerDeath,
     PowerPelletEaten,
+    GhostEaten,
 }
 
 public enum FruitType{
@@ -14,4 +15,11 @@ public enum FruitType{
     GalaxianShip,
     Bell,
     Key,
+}
+
+public enum GhostType{
+    Barry,
+    Chris,
+    Jill,
+    Wesker
 }

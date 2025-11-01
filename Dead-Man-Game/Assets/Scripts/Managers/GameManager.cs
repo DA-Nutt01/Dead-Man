@@ -183,8 +183,19 @@ public class GameManager : MonoBehaviour
     {
         int points = ghost.points * ghostMultiplier;
         SetScore(score + points);
-
+        StartCoroutine(ghost.GhostEaten(ghostMultiplier));
+        StartCoroutine(Pacman.Instance.GhostEaten());
         ghostMultiplier++;
+        
+        // Loop through each ghost and extend their frightened state to offset the pause from eating a ghost
+        // FIXME
+        /*foreach (Ghost i in ghosts) {
+            i.GetComponent<GhostFrightened>().AddPauseTime(1.5f);
+        }*/
+    }
+
+    public int GetGhostMulitplier(){
+        return ghostMultiplier;
     }
 
     public void PelletEaten(Pellet pellet)
@@ -257,11 +268,16 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlaySound("Gunshots");
     }
 
+    public void ChangeGameState(GameState newState){
+        gameState = newState;
+    }
+
     private IEnumerator DeathSequence()
     {   
         // Set game state to pause movment & animations
         gameState = GameState.PlayerDeath;
         AudioManager.Instance.StopSound("GhostMove");
+        AudioManager.Instance.StopSound("STARS Footsteps");
         // Wait a second
         yield return new WaitForSeconds(1f);
         DisableGhosts();

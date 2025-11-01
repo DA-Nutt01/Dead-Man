@@ -119,6 +119,107 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &324415663
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[10].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[10].name
+      value: MenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[11].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[10].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[10].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[10].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e49bde12d7c8149baa352cc893d90702, type: 3}
+    - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: sounds.Array.data[11].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5d5f12009971f4d888486e55e6d8acba, type: 3}
+    - target: {fileID: 1316824011001565068, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_Name
+      value: Audio Manager (Deadman)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.32078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.52529
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177127641289520793, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
 --- !u!1 &1170987070
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +400,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3567459936905297989, guid: a4c18f31369ba4bedba8573008312ef7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7985275616104038143, guid: a4c18f31369ba4bedba8573008312ef7, type: 3}
       propertyPath: m_Name
       value: Menu Canvas
@@ -370,5 +475,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1170987073}
+  - {fileID: 324415663}
   - {fileID: 4456976210808778023}
   - {fileID: 5787994557291795309}
