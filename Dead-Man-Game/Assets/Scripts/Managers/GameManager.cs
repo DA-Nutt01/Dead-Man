@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     private int ghostMultiplier = 1;
     private bool earnedExtraLife = false;
+    private bool isPacmanEaten = false;
 
     // EVENTS
     public static event Action OnLevelStart;
@@ -102,6 +103,7 @@ public class GameManager : MonoBehaviour
         }
 
         pacman.ResetState();
+        isPacmanEaten = false;
     }
 
     private void EnableGhosts()
@@ -183,8 +185,8 @@ public class GameManager : MonoBehaviour
     {
         int points = ghost.points * ghostMultiplier;
         SetScore(score + points);
-        StartCoroutine(ghost.GhostEaten(ghostMultiplier));
-        StartCoroutine(Pacman.Instance.GhostEaten());
+        //StartCoroutine(ghost.GhostEaten(ghostMultiplier));
+        //StartCoroutine(Pacman.Instance.GhostEaten());
         ghostMultiplier++;
         
         // Loop through each ghost and extend their frightened state to offset the pause from eating a ghost
@@ -264,8 +266,13 @@ public class GameManager : MonoBehaviour
 
     public void PacmanEaten()
     {
-        StartCoroutine(DeathSequence());
-        AudioManager.Instance.PlaySound("Gunshots");
+        if (!isPacmanEaten)
+        {
+            isPacmanEaten = true;
+            StartCoroutine(DeathSequence());
+            AudioManager.Instance.PlaySound("Gunshots");
+        }
+        return;
     }
 
     public void ChangeGameState(GameState newState){

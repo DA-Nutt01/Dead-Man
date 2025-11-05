@@ -524,7 +524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 561608526291295456, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
       propertyPath: sounds.Array.data[10].volume
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1316824011001565068, guid: 5dee434667a1f451185f1bc433b855b8, type: 3}
       propertyPath: m_Name

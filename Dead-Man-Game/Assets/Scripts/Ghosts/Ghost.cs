@@ -14,7 +14,8 @@ public class Ghost : MonoBehaviour
     public GhostBehavior initialBehavior;
 
     [SerializeField] private GameObject bodyContainer;
-    public Text pointText;
+    [SerializeField] private GameObject textObject;
+    [SerializeField] private Text pointText;
 
     [SerializeField] private GhostType ghostType;
     public Transform target;
@@ -28,6 +29,7 @@ public class Ghost : MonoBehaviour
         chase = GetComponent<GhostChase>();
         frightened = GetComponent<GhostFrightened>();
 
+        textObject.SetActive(false);
         pointText.enabled = false;
     }
 
@@ -93,10 +95,13 @@ public class Ghost : MonoBehaviour
         
 
         // Toggle world canvas text
+        textObject.transform.position = transform.position;
+        textObject.SetActive(true);
         pointText.enabled = true;
         // Wait 1 second
         yield return new WaitForSeconds(1.5f);
         // Resume gameplay
+        textObject.SetActive(false);
         pointText.enabled = false;
         bodyContainer.SetActive(true);
         GameManager.Instance.ChangeGameState(GameState.Gameplay);
