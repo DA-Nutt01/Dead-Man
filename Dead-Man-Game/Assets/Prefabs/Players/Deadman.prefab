@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4657742697418918697
 Transform:
   m_ObjectHideFlags: 0
@@ -79,13 +79,13 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 5089418831452260443, guid: 518d65e4e9bdb442f9efa271aa9d79f9, type: 3}
+  m_SortingOrder: 7
+  m_Sprite: {fileID: -7680075008989481833, guid: f59211e0ad6d346999a4f6bf99a5fa3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.642857, y: 3.2142856}
+  m_Size: {x: 1.85, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 841214846804863694}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824908b24fd58c84296be726049e76aa, type: 3}
   m_Name: 
@@ -106,7 +106,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 5089418831452260443, guid: 518d65e4e9bdb442f9efa271aa9d79f9, type: 3}
   - {fileID: 4492286088178847603, guid: 3177832df9cf84de5814de4052819d5f, type: 3}
-  animationTime: 0.25
+  animationTime: 0.3
   loop: 1
   ignoreGameState: 0
 --- !u!1 &6038318316045854526
@@ -121,9 +121,9 @@ GameObject:
   - component: {fileID: 6038318316045854525}
   - component: {fileID: 6038318316045854512}
   - component: {fileID: 6038318316045854513}
-  - component: {fileID: 6038318316045854514}
   - component: {fileID: 6038318316045854519}
   - component: {fileID: 6038318316045854515}
+  - component: {fileID: 7181363335062968992}
   m_Layer: 6
   m_Name: Deadman
   m_TagString: Untagged
@@ -269,21 +269,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.3
---- !u!114 &6038318316045854514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6038318316045854526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d0a2c5d43813649babf2430742dae9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathSequence: {fileID: 8277160542397365967}
-  NemesisRoarSprite: {fileID: -7680075008989481833, guid: f59211e0ad6d346999a4f6bf99a5fa3f, type: 3}
-  NemesisMovement: {fileID: 0}
 --- !u!114 &6038318316045854519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +307,21 @@ MonoBehaviour:
   animationTime: 0.125
   loop: 1
   ignoreGameState: 0
+--- !u!114 &7181363335062968992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038318316045854526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41520163dcdb34036b355ec0a01bebd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Deadman
+  m_DeathSequence: {fileID: 8277160542397365967}
+  NemesisSkin: {fileID: 841214846804863694}
+  NemesisMovement: {fileID: 6160053650670512465}
 --- !u!1 &9178482116000426182
 GameObject:
   m_ObjectHideFlags: 0

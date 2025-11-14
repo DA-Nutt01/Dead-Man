@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Configuration"), Space(5)]
     [SerializeField] private Ghost[] ghosts;
-    [SerializeField] private Pacman pacman;
+    [SerializeField] private PacmanBase pacmanBase;
     [SerializeField] private Transform pellets;
     [Header("UI"), Space(5)]
     [SerializeField] private Text gameOverText;
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     
     private void Awake()
     {
+
         if (Instance != null) {
             DestroyImmediate(gameObject);
         } else {
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
             ghosts[i].ResetState();
         }
 
-        pacman.ResetState();
+        pacmanBase.ResetState();
         isPacmanEaten = false;
     }
 
@@ -122,12 +123,12 @@ public class GameManager : MonoBehaviour
 
     private void EnablePacMan()
     {
-        pacman.gameObject.SetActive(true);
+        pacmanBase.gameObject.SetActive(true);
     }
 
     private void DisablePacMan()
     {
-        pacman.gameObject.SetActive(false);
+        pacmanBase.gameObject.SetActive(false);
     }
 
     private void GameOver()
@@ -138,7 +139,7 @@ public class GameManager : MonoBehaviour
             ghosts[i].gameObject.SetActive(false);
         }
 
-        pacman.gameObject.SetActive(false);
+        pacmanBase.gameObject.SetActive(false);
         SaveHighScore();
         Invoke(nameof(LoadMenu), 3f);
     }
@@ -208,7 +209,7 @@ public class GameManager : MonoBehaviour
 
         if (!HasRemainingPellets())
         {
-            pacman.gameObject.SetActive(false);
+            pacmanBase.gameObject.SetActive(false);
             Invoke(nameof(NextLevel), 3f);
         }
     }
@@ -238,7 +239,7 @@ public class GameManager : MonoBehaviour
             ghosts[i].frightened.Enable(pellet.duration + audioDuration);
         }
 
-        pacman.Transform(audioDuration, pellet.duration);
+        if (pacmanBase is Deadman deadman) deadman.Transform(audioDuration, pellet.duration);
 
         yield return new WaitForSeconds(audioDuration);
 
@@ -288,7 +289,7 @@ public class GameManager : MonoBehaviour
         // Wait a second
         yield return new WaitForSeconds(1f);
         DisableGhosts();
-        pacman.DeathSequence();
+        pacmanBase.DeathSequence();
         
         SetLives(lives - 1);
 

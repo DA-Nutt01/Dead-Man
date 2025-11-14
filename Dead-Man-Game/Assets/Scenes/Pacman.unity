@@ -1146,18 +1146,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5896912869381591406, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6038318316045854519, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6038318316045854524, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6038318316045854524, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1201,14 +1189,6 @@ PrefabInstance:
     - target: {fileID: 6038318316045854526, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
       propertyPath: m_Name
       value: Pacman
-      objectReference: {fileID: 0}
-    - target: {fileID: 6038318316045854526, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8277160542397365967, guid: b6894cca0173e8041bba0e4a8be5fde1, type: 3}
-      propertyPath: ignoreGameState
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8704,6 +8684,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1945791160}
+    - target: {fileID: 4816249141454630087, guid: f36b152e67d6845a1980663045ad136e, type: 3}
+      propertyPath: pacmanBase
+      value: 
+      objectReference: {fileID: 6038318316664210396}
     - target: {fileID: 4816249141454630087, guid: f36b152e67d6845a1980663045ad136e, type: 3}
       propertyPath: playerText
       value: 

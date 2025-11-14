@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &267590929 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6038318316045854514, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-  m_PrefabInstance: {fileID: 625483251}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d0a2c5d43813649babf2430742dae9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &267590933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6038318316045854524, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
@@ -246,30 +235,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 672828260759337289, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 841214846804863694, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657742697418918697, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4657742697418918697, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6038318316045854514, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: NemesisSkin
-      value: 
-      objectReference: {fileID: 1900468563}
-    - target: {fileID: 6038318316045854514, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: NemesisMovement
-      value: 
-      objectReference: {fileID: 1900468565}
     - target: {fileID: 6038318316045854524, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -313,38 +278,6 @@ PrefabInstance:
     - target: {fileID: 6038318316045854526, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
       propertyPath: m_Name
       value: Deadman
-      objectReference: {fileID: 0}
-    - target: {fileID: 6160053650670512465, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6160053650670512465, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: animationTime
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_Size.x
-      value: 1.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_Size.y
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -7680075008989481833, guid: f59211e0ad6d346999a4f6bf99a5fa3f, type: 3}
-    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_SortingOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6392315286414310000, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -449,6 +382,17 @@ Transform:
   - {fileID: 7093956643364437068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712687117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7181363335062968992, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
+  m_PrefabInstance: {fileID: 625483251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41520163dcdb34036b355ec0a01bebd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Deadman
 --- !u!114 &1750044680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8404568252169512664, guid: 729064b1f251e4235b8df72ff2c7efac, type: 3}
@@ -471,22 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2a82916a0e72a4daffdef2f2eafb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1900468563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 841214846804863694, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-  m_PrefabInstance: {fileID: 625483251}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1900468565 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6160053650670512465, guid: 47279aaf8a960445b914ff46fc807799, type: 3}
-  m_PrefabInstance: {fileID: 625483251}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900468563}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824908b24fd58c84296be726049e76aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatedSprite
 --- !u!114 &1974398881 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7751997247944386843, guid: bd911f16484aa4403b16807d9de431f0, type: 3}
@@ -600,10 +528,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1671937172}
     m_Modifications:
     - target: {fileID: 206900866168798363, guid: 328cb0d38b82247e9a67337214b4ffc7, type: 3}
-      propertyPath: pacman
-      value: 
-      objectReference: {fileID: 267590929}
-    - target: {fileID: 206900866168798363, guid: 328cb0d38b82247e9a67337214b4ffc7, type: 3}
       propertyPath: pellets
       value: 
       objectReference: {fileID: 3913947692227542533}
@@ -623,6 +547,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 2341572862928575751}
+    - target: {fileID: 206900866168798363, guid: 328cb0d38b82247e9a67337214b4ffc7, type: 3}
+      propertyPath: pacmanBase
+      value: 
+      objectReference: {fileID: 1712687117}
     - target: {fileID: 206900866168798363, guid: 328cb0d38b82247e9a67337214b4ffc7, type: 3}
       propertyPath: playerText
       value: 

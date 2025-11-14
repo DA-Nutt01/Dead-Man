@@ -3,177 +3,44 @@ using System.Collections;
 using System;
 
 [RequireComponent(typeof(Movement))]
-public class Pacman : MonoBehaviour
+public class Pacman : PacmanBase
 {
-    public static Pacman Instance {get; private set;}
+    public static Pacman Instance { get; private set; }
 
-    [SerializeField] private AnimatedSprite deathSequence;
-    [SerializeField] private GameObject NemesisSkin;
-    [SerializeField] private AnimatedSprite NemesisMovement;
-
-    private SpriteRenderer spriteRenderer;
-    private CircleCollider2D circleCollider;
-    private Movement movement;
-    private bool isTransformed = false;
-    private Coroutine currentTransformationCoroutine; // Stores the active coroutine
-
-    private void OnEnable(){
-        // Subscribe to Input Events
-        InputManager.Instance.OnMoveUp += InputManager_OnMoveUp;
-        InputManager.Instance.OnMoveDown += InputManager_OnMoveDown;
-        InputManager.Instance.OnMoveLeft += InputManager_OnMoveLeft;
-        InputManager.Instance.OnMoveRight += InputManager_OnMoveRight;
-    }
-
-    private void OnDisable(){
-        // Unsubscribe from Input Events
-        InputManager.Instance.OnMoveUp -= InputManager_OnMoveUp;
-        InputManager.Instance.OnMoveDown -= InputManager_OnMoveDown;
-        InputManager.Instance.OnMoveLeft -= InputManager_OnMoveLeft;
-        InputManager.Instance.OnMoveRight -= InputManager_OnMoveRight;
-    }
-
-    private void Awake()
+    protected override void Awake()
     {
-        if (Instance != null & Instance != this) {
+        base.Awake();
+
+        if (Instance != null && Instance != this)
+        {
             DestroyImmediate(gameObject);
-        } else {
+        }
+        else
+        {
             Instance = this;
         }
-        
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        circleCollider = GetComponent<CircleCollider2D>();
-        movement = GetComponent<Movement>();
-
-        NemesisSkin.SetActive(false);
-        isTransformed = false;
     }
-
-    private void Update()
+    
+    private void OnEnable()
     {
-        if (GameManager.gameState != GameState.Gameplay) return;
-
-        // Do not rotate Deadman if he is transformed as Nemesis
-        if (isTransformed) return;
-
-        // Keep Pac-Man upright and just flip or rotate 90° increments
-        Vector2 dir = movement.direction;
-        if (dir == Vector2.up)
-        {
-            transform.rotation = Quaternion.Euler(0, 0, 90);
-        }
-        else if (dir == Vector2.down)
-        {
-            transform.rotation = Quaternion.Euler(0, 0, -90);
-        }
-        else if (dir == Vector2.left)
-        {
-            transform.rotation = Quaternion.Euler(0, 180, 0); // flip horizontally
-        }
-        else if (dir == Vector2.right)
-        {
-            transform.rotation = Quaternion.identity;
-        }
+        base.OnEnable(); // Ensure base class event subscriptions are handled
     }
 
-    private void InputManager_OnMoveUp(){
-        if (GameManager.gameState != GameState.Gameplay) return;
-        movement.SetDirection(Vector2.up);
-    }
-
-    private void InputManager_OnMoveDown(){
-        if (GameManager.gameState != GameState.Gameplay) return;
-        movement.SetDirection(Vector2.down);
-    }
-
-    private void InputManager_OnMoveLeft(){
-        if (GameManager.gameState != GameState.Gameplay) return;
-        movement.SetDirection(Vector2.left);
-    }
-
-    private void InputManager_OnMoveRight(){
-        if (GameManager.gameState != GameState.Gameplay) return;
-        movement.SetDirection(Vector2.right);
-    }
-
-    public void ResetState()
+    private void OnDisable()
     {
-        enabled = true;
-        spriteRenderer.enabled = true;
-        circleCollider.enabled = true;
-        deathSequence.enabled = false;
-        NemesisMovement.enabled = false;
-        movement.ResetState();
-        gameObject.SetActive(true);
-        NemesisSkin.SetActive(false);
+        base.OnDisable(); // Ensure base class event unsubscriptions are handled
     }
 
-    public void DeathSequence()
+    public override void ResetState()
     {
-        AudioManager.Instance.PlaySound("PacManDeath");
-        enabled = false;
-        spriteRenderer.enabled = false;
-        circleCollider.enabled = false;
-        movement.enabled = false;
-        deathSequence.enabled = true;
-        deathSequence.Restart();
+        base.ResetState();
+        // Add any specific reset logic for Pacman here
     }
 
-    public void Transform(float buffer, float duration){
-        isTransformed = true;
-
-        // Stop the current transformation coroutine if it's running
-        if (currentTransformationCoroutine != null)
-        {
-            StopCoroutine(currentTransformationCoroutine);
-        }
-
-        // Reset the rotation of NemesisSkin to ensure it's upright
-        NemesisSkin.transform.rotation = Quaternion.identity;
-
-        // Start a new transformation coroutine with the new duration
-        currentTransformationCoroutine = StartCoroutine(NemesisTransformation(buffer, duration));
-    }
-
-    public IEnumerator GhostEaten(){
-        // Toggle Sprite Off
-        NemesisSkin.SetActive(false);
-        yield return new WaitForSeconds(1.5f);
-        // Toggle Sprite On
-        NemesisSkin.SetActive(true);
-    }
-
-    private IEnumerator NemesisTransformation(float audioBufferTime, float duration)
+    public override void DeathSequence()
     {
-        // Ensure NemesisSkin is enabled and spriteRenderer is disabled
-        spriteRenderer.enabled = false;
-        NemesisSkin.SetActive(true);
-
-        // Wait for the audio buffer
-        yield return new WaitForSeconds(audioBufferTime);
-
-        // Ensure NemesisSkin is still active after the audio buffer
-        if (!NemesisSkin.activeSelf)
-        {
-            NemesisSkin.SetActive(true);
-        }
-
-        // Enable the Nemesis moving animation set
-        NemesisMovement.enabled = true;
-        NemesisMovement.Restart();
-
-        // Wait for the transformation duration
-        yield return new WaitForSeconds(duration);
-
-        // Transform back
-        isTransformed = false;
-        NemesisMovement.enabled = false;
-        NemesisMovement.Restart();
-        NemesisSkin.SetActive(false);
-        spriteRenderer.enabled = true;
-
-        // Clear the current coroutine reference
-        currentTransformationCoroutine = null;
+        base.DeathSequence();
+        // Add any specific death sequence logic for Pacman here
     }
 }
 
